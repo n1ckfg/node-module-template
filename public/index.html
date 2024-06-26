@@ -18,14 +18,20 @@
 				background-color: yellow;
 			}
 		</style>
-		<script src="./js/libraries/socket.io/socket.io.js"></script>			
 	</head>
 
 	<body>	
 		<div id="button"></div>
 
-		<script>
-			"use strict";
+	    <script type="importmap">
+	        {
+	            "imports": {
+	                "io": "./js/libraries/socket.io/socket.io.esm.min.js"
+	            }
+	        }
+	    </script>
+		<script type="module">
+			import { io } from "io";
 
 			const socket = io();
 
